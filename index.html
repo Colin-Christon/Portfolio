@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio Navbar</title>
+  <title>Portfolio </title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <nav class="navbar">
       <div class="container">
-        <a href="#" class="logo">MyPortfolio</a>
+        <a href="#" class="logo"><img class="logo-image" src="./images/COLIN DCRUZ.png" alt=""></a>
         <button class="menu-toggle" aria-label="Toggle Menu">
           <span class="burger"></span>
         </button>
@@ -28,7 +28,7 @@
       <h1 class="name">Hello, I'm <span>Colin Christon Dcruz</span></h1>
       <p class="profession">RPG Developer at EG INDIA</p>
     </div>
-    <div class="image"><img src="./images/profile.png" alt=""></div>
+    <div class="image"><img src="./images/aiImage.png" alt=""></div>
   </section>
 
   <section id="about" class="about-section">
@@ -58,22 +58,23 @@
           </div>
         </div>
   
-        <div class="skills">
-          <h3>Skills</h3>
-          <ul class="skills-list">
-            <li>HTML & CSS</li>
-            <li>JavaScript</li>
-            <li>TypeScript</li>
-            <li>Angular</li>
-            <li>RPG Dev</li>
-            <li>Kotlin</li>
-            <li>Node.js</li>
-            <li>DB2</li>
-            <li>Postgres</li>
-            <li>SCSS</li>
-            <li>Git & GitHub</li>
-          </ul>
-        </div>
+       
+      </div>
+    </div>
+  </section>
+
+  <section class="skills-section">
+    <div class="skills-wrapper">
+      <div class="skills-scroll">
+        <img src="./images/skills/html.png" alt="Kotlin" class="skill-img">
+        <img src="./images/skills/folder.png" alt="SQL" class="skill-img">
+        <img src="./images/skills/sass.png" alt="RPG" class="skill-img">
+        <img src="./images/skills/js-file.png" alt="Java" class="skill-img">
+        <img src="./images/skills/typescript.png" alt="Angular" class="skill-img">
+        <img src="./images/skills/programing.png" alt="Angular" class="skill-img">
+        <img src="./images/skills/postgre.png" alt="Angular" class="skill-img">
+        <img src="./images/skills/social.png" alt="JavaScript" class="skill-img">
+        <img src="./images/skills/github-sign.png" alt="Angular" class="skill-img">
       </div>
     </div>
   </section>
@@ -84,15 +85,14 @@
       <div class="projects-grid">
         <!-- Project 1 -->
         <div class="project-card">
-          <img src="./images/project-management.png" alt="Customer Maintenance" class="project-img">
-          <h3 class="project-title">Customer Maintenance Backend<h3>
-          <p class="project-description">A customer maintenance system developed using RPGLE on IBM i. The application includes features for adding, modifying, and managing customer records. It was built with SQLRPG to handle backend operations efficiently.</p>
-          <a href="#" class="project-link" target="_blank">View Project</a>
-        </div>
-  
+            <img src="./images/customer.png" alt="Note Management Application" class="project-img">
+            <h3 class="project-title">Customer Maintenance </h3>
+            <p class="project-description">A customer maintenance system developed using RPGLE on IBM i. The application includes features for adding, modifying, and managing customer records. It was built with SQLRPG to handle backend operations efficiently.</p>
+            <a href="#" class="project-link" target="_blank">View Project</a>
+          </div>
         <!-- Project 2 -->
         <div class="project-card">
-          <img src="./images/project-management.png" alt="Note Management Application" class="project-img">
+          <img src="./images/kanban.png" alt="Note Management Application" class="project-img">
           <h3 class="project-title">Note Management Application</h3>
           <p class="project-description">Developed in Kotlin with RPC, this note management system allows users to sign in, sign up, add, modify, and delete notes. It supports authentication via SLT and LLT tokens and is available as both a mobile application and a website.</p>
           <a href="#" class="project-link" target="_blank">View Project</a>
@@ -100,7 +100,7 @@
   
         <!-- Project 3 -->
         <div class="project-card">
-          <img src="./images/project-management.png" alt="Hand Gesture Presentation Control" class="project-img">
+          <img src="./images/sign-language.png" alt="Hand Gesture Presentation Control" class="project-img">
           <h3 class="project-title">Hand Gesture Presentation Control</h3>
           <p class="project-description">A machine learning-based project that allows users to control presentations using hand gestures. The main feature includes training a model with live hand tracking to recognize gestures and execute presentation commands.</p>
           <a href="#" class="project-link" target="_blank">View Project</a>
