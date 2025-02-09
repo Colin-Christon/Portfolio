@@ -68,16 +68,16 @@ header {
 }
 .navbar .nav-links li {
   margin: 0 1rem;
+  transition: transform 0.3s;
 }
 .navbar .nav-links li a {
   color: white;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 18px;
   transition: color 0.3s;
 }
 .navbar .nav-links li a:hover {
   color: #ffa500;
-  transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
@@ -99,49 +99,95 @@ header {
 }
 .hero {
   height: 90vh;
-  background-color: #090979;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 40px;
-  position: relative;
-  text-align: center;
-}
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  justify-content: space-between;
+  padding: 50px;
+  background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(9, 9, 121) 30%, rgb(6, 79, 167) 54%, rgb(0, 212, 255) 100%);
 }
 .hero .hero-content {
-  position: relative;
   color: white;
-  max-width: 800px;
-  text-align: center;
-  z-index: 1;
-  margin-left: 40px;
-  font-family: "Arial", sans-serif;
+  max-width: 600px;
 }
 .hero .hero-content .name {
   font-size: 3rem;
-  font-weight: 700;
+  font-weight: bold;
 }
 .hero .hero-content .name span {
   color: #ffa500;
 }
-.hero .hero-content .profession {
+.hero .hero-content .tagline {
   font-size: 1.5rem;
-  margin-top: 0.5rem;
-  font-style: italic;
-  color: #e0e0e0;
-  animation: fadeInUp 1.5s ease-out;
+  margin: 10px 0;
+  color: #dfe6e9;
 }
-.hero img {
-  height: 400px;
+.hero .hero-content .profession {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+}
+.hero .hero-content .profession .company-link {
+  text-decoration: none;
+  color: #ffa500;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 10px;
+}
+.hero .hero-content .profession .company-link .company-logo {
+  width: 30px;
+  height: 30px;
+}
+.hero .hero-content .action-buttons {
+  margin: 20px 0;
+  display: flex;
+}
+.hero .hero-content .action-buttons .icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+  transition: transform 0.3s ease-in;
+}
+.hero .hero-content .action-buttons .icon:hover {
+  transform: translateY(-5px);
+}
+.hero .hero-content .action-buttons .cv-button {
+  display: inline-block;
+  background: #0984e3;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+.hero .hero-content .action-buttons .cv-button:hover {
+  background: #ffa500;
+}
+.hero .hero-content .social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+.hero .hero-content .social-icons .icon {
+  color: white;
+  font-size: 1.8rem;
+  transition: transform 0.3s;
+}
+.hero .hero-content .social-icons .icon:hover {
+  transform: translateY(-5px);
+}
+.hero .hero-content .social-icons .github {
+  color: #333;
+}
+.hero .hero-content .social-icons .instagram {
+  color: #e1306c;
+}
+.hero .hero-content .social-icons .linkedin {
+  color: #0077b5;
+}
+.hero .image img {
   width: 400px;
+  height: auto;
   animation: upDown 3s infinite alternate;
 }
 
@@ -166,61 +212,70 @@ header {
     transform: translateY(0);
   }
 }
-.projects-section {
-  padding: 2rem 2rem;
+.project-section {
+  padding: 20px;
   background-color: #f9f9f9;
   text-align: center;
 }
-.projects-section .section-title {
+
+.section-title {
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 2rem;
   color: #2a2a72;
 }
-.projects-section .projects-grid {
-  height: 500px;
+
+.project-grid {
   display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
 }
-.projects-section .project-card {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease;
+
+.project-cards {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  cursor: pointer;
 }
-.projects-section .project-card:hover {
+
+.project-cards img {
+  width: 100px;
+  height: 100px;
+}
+
+.project-cards:hover {
   transform: translateY(-5px);
 }
-.projects-section .project-card .project-img {
-  width: 200px;
-  height: 200px;
-  border-radius: 10px;
+
+.hidden {
+  display: none;
 }
-.projects-section .project-card .project-title {
-  font-size: 1.5rem;
-  margin-top: 10px;
-  color: #2a2a72;
-}
-.projects-section .project-card .project-description {
-  font-size: 1rem;
-  margin: 0.5rem 0;
-  color: #0f0808;
-}
-.projects-section .project-card .project-link {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.5rem 1.5rem;
+
+.view-more-btn,
+.exit-btn {
   background-color: #2a2a72;
   color: white;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 16px;
+  transition: background-color 0.3s;
+  margin-bottom: 20px;
 }
-.projects-section .project-card .project-link:hover {
+
+.view-more-btn:hover,
+.exit-btn:hover {
   background-color: #ffa500;
+}
+
+.exit-btn {
+  background-color: #e63946;
+  margin-left: 10px;
 }
 
 .about-section {
@@ -355,6 +410,65 @@ header {
     transform: translateX(-100%);
   }
 }
+.work-experience-section {
+  background-color: #f9f9f9;
+  padding: 40px;
+}
+
+.section-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.experience-card {
+  padding: 20px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+}
+
+.company-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.company-logo {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.company-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.position-duration {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.experience-description {
+  font-size: 1rem;
+  margin-top: 10px;
+  color: #333;
+}
+
 .contact-section {
   padding: 4rem 2rem;
   background-color: #f9f9f9;
@@ -430,7 +544,7 @@ header {
 }
 
 footer {
-  background-color: #090979;
+  background: linear-gradient(95deg, rgb(0, 212, 255) 0%, rgb(6, 79, 167) 30%, rgb(9, 9, 121) 54%, rgb(25, 13, 111) 100%);
   color: #ecf0f1;
   padding: 20px;
   font-family: "Arial", sans-serif;
