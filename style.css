@@ -509,6 +509,12 @@ header {
   height: 120px;
   resize: none;
 }
+.contact-section .contact-content .contact-form .contact-success {
+  color: rgb(63, 198, 63);
+  font-size: 18px;
+  margin-bottom: 10px;
+  display: none;
+}
 .contact-section .contact-content .contact-form .form-btn {
   background-color: #2a2a72;
   color: white;
@@ -572,6 +578,13 @@ footer .footer-left ul li a {
 }
 footer .footer-left ul li a:hover {
   color: #ffa500;
+}
+footer .footer-left ul li a img {
+  width: 30px;
+  transition: transform 0.3s;
+}
+footer .footer-left ul li a img:hover {
+  transform: translateY(-5px);
 }
 footer .footer-right {
   font-size: 14px;

@@ -224,6 +224,7 @@ $home-background-color : linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,
   }
 
   .image {
+
     img {
       width: 400px;
       height: auto;
@@ -651,6 +652,13 @@ $home-background-color : linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,
           height: 120px;
           resize: none;
         }
+
+        .contact-success{
+          color: rgb(63, 198, 63);
+          font-size: 18px;
+          margin-bottom: 10px;
+          display: none;
+        }
   
         .form-btn {
           background-color: $button-color;
@@ -728,6 +736,16 @@ $home-background-color : linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,
             &:hover {
               color: $hover-color;
             }
+
+            img{
+              width: 30px;
+              transition: transform 0.3s;
+
+              &:hover{
+                transform: translateY(-5px);
+              }
+            }
+            
           }
         }
       }

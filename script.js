@@ -29,36 +29,38 @@ document.addEventListener("DOMContentLoaded", () => {
     exitBtn.classList.add('hidden');
   });
 
+
   function sendEmail() {
-    let params = {
-      service_id: 'service_gnfju0p',
-      template_id: 'template_cij011g',
-      user_id: 'lukFEYq4cqP4L9PZx',
-      template_params: {
-        from_name: document.getElementById("from_name").value,
-        from_email: document.getElementById("from_email").value,
-        message: document.getElementById("msg").value,
-      },
+    const success = document.getElementById("success");
+    const templateParams = {
+      from_name: document.getElementById("from_name").value,
+      from_email: document.getElementById("from_email").value,
+      message: document.getElementById("msg").value,
     };
-  
-    // Create and configure the request
+    console.log(templateParams);
     fetch('https://api.emailjs.com/api/v1.0/email/send', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(params),
+      body: JSON.stringify({
+        service_id: 'service_gnfju0p',
+        template_id: 'template_cij011g',
+        user_id: 'lukFEYq4cqP4L9PZx',
+        template_params: templateParams
+      }),
     })
       .then((response) => {
         if (response.ok) {
-          alert('Your mail has been sent!');
+          success.style.display = "inline";
         } else {
-          return response.json().then((error) => {
-            alert('Oops... a ' + JSON.stringify(error));
+          response.json().then((error) => {
+            alert('Oops... ' + JSON.stringify(error));
           });
         }
       })
       .catch((error) => {
         alert('Oops... ' + error);
       });
+
   }
