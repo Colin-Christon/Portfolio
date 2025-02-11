@@ -2,6 +2,10 @@ const viewMoreBtn = document.querySelector('.view-more-btn');
 const exitBtn = document.querySelector('.exit-btn');
 const hiddenCards = document.querySelectorAll('.project-cards.hidden');
 
+function changeTheme(){
+
+  document.body.classList.toggle("dark-theme");
+}
 
 document.addEventListener("DOMContentLoaded", () => {
     const menuToggle = document.querySelector(".menu-toggle");
@@ -30,37 +34,21 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 
-  function sendEmail() {
-    const success = document.getElementById("success");
-    const templateParams = {
-      from_name: document.getElementById("from_name").value,
-      from_email: document.getElementById("from_email").value,
-      message: document.getElementById("msg").value,
-    };
-    console.log(templateParams);
-    fetch('https://api.emailjs.com/api/v1.0/email/send', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        service_id: 'service_gnfju0p',
-        template_id: 'template_cij011g',
-        user_id: 'lukFEYq4cqP4L9PZx',
-        template_params: templateParams
-      }),
-    })
-      .then((response) => {
-        if (response.ok) {
-          success.style.display = "inline";
-        } else {
-          response.json().then((error) => {
-            alert('Oops... ' + JSON.stringify(error));
-          });
-        }
-      })
-      .catch((error) => {
-        alert('Oops... ' + error);
-      });
+  const btn = document.getElementById("form-button");
 
-  }
+  const success = document.getElementById("success");
+  document.getElementById('con-form')
+   .addEventListener('submit', function(event) {
+     event.preventDefault();
+      btn.innerHTML = "sending..."
+     const serviceID = 'service_gnfju0p';
+     const templateID = 'template_cij011g';
+  
+     emailjs.sendForm(serviceID, templateID, this)
+      .then(() => {
+        btn.innerHTML = 'Send Message';
+        success.style.display = "inline";
+      }, (err) => {
+        btn.innerHTML = 'Send Message';
+      });
+  });

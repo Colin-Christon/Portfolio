@@ -170,14 +170,14 @@
       
       <div class="contact-content">
         <!-- Contact Form -->
-        <form class="contact-form">
-          <input type="text" id="from_name" placeholder="Your Name" required class="form-input">
-          <input type="email" id="from_email" placeholder="Your Email" required class="form-input">
-          <textarea id="msg" placeholder="Your Message" required class="form-textarea"></textarea>
-          <p class="contact-success" id="success">Email Sent Successfully!</p>
-          <button type="submit"  class="form-btn" onclick="sendEmail()">Send Message</button>
+        <form class="contact-form" id="con-form">
+          <input type="text" name="from_name" placeholder="Your Name" required class="form-input">
+          <input type="email" name="from_email" placeholder="Your Email" required class="form-input">
+          <textarea name="message" placeholder="Your Message" required class="form-textarea"></textarea>
+          <p class="contact-success" id="success">Message has been sent!</p>
+          <button type="submit"  class="form-btn" id="form-button" >Send Message</button>
         </form>
-  
+        
         <!-- Social Media Links -->
       </div>
     </div>
@@ -199,5 +199,11 @@
   </footer>
   
   <script src="script.js"></script>
+  <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('lukFEYq4cqP4L9PZx')
+</script>
 </body>
 </html>

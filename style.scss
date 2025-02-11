@@ -3,6 +3,10 @@ $hover-color : #ffa500;
 $button-color: #2a2a72;
 $home-background-color : linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 30%, rgba(6,79,167,1) 54%, rgba(0,212,255,1) 100%);
 
+
+// dark theme colors 
+$dark-primary-color: black;
+
 * {
     margin: 0;
     padding: 0;
@@ -12,13 +16,12 @@ $home-background-color : linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,
   body {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
-  
+
   header {
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 30%, rgba(6,79,167,1) 54%, rgba(0,212,255,1) 100%);
+    background-color: $primary-color;
     color: white;
   }
-  
-  
+ 
   .navbar {
     display: flex;
     align-items: center;
@@ -357,6 +360,12 @@ $home-background-color : linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,
   .project-cards img{
     width: 100px;
     height: 100px;
+    margin: 10px;
+  }
+
+  .project-description{
+    color: #555;
+    margin: 5px;;
   }
   
   .project-cards:hover {
@@ -425,7 +434,7 @@ $home-background-color : linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,
         margin-top: 0.5rem;
         font-size: 1rem;
         line-height: 1.6;
-        color: #555;
+        color: black;
       }
     }
   
@@ -548,6 +557,8 @@ $home-background-color : linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,
     }
   }
   
+
+  //work experience
   .work-experience-section {
     background-color: #f9f9f9;
     padding: 40px;

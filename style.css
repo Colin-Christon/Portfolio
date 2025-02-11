@@ -9,7 +9,7 @@ body {
 }
 
 header {
-  background: linear-gradient(90deg, rgb(2, 0, 36) 0%, rgb(9, 9, 121) 30%, rgb(6, 79, 167) 54%, rgb(0, 212, 255) 100%);
+  background-color: #090979;
   color: white;
 }
 
@@ -244,6 +244,12 @@ header {
 .project-cards img {
   width: 100px;
   height: 100px;
+  margin: 10px;
+}
+
+.project-description {
+  color: #555;
+  margin: 5px;
 }
 
 .project-cards:hover {
@@ -305,7 +311,7 @@ header {
   margin-top: 0.5rem;
   font-size: 1rem;
   line-height: 1.6;
-  color: #555;
+  color: black;
 }
 .about-section .education-timeline {
   text-align: left;
