@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="container">
+        <a href="#" class="logo"><img class="logo-image" src="./images/COLIN DCRUZ.png" alt=""></a>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#certificates">Certificates</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="theme-toggle" id="theme-toggle" onclick="changeTheme()"><img src="./images/dark.png" id="theme-img" alt=""></button>
+        <button class="menu-toggle" aria-label="Toggle Menu" id="menu-toggle">
+          <span class="burger"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1 class="name">Hello, I'm <br><span>Colin Christon Dcruz</span></h1>
+      <p class="tagline">Writing bugs by day, fixing them by night — living the developer life!</p>
+      <p class="profession">
+        RPG Developer at     
+        <a href="https://global.eg.dk/" target="_blank" class="company-link"> EG INDIA
+        </a>
+      </p>
+      <div class="action-buttons">
+        <a href="https://github.com/Colin-Christon" target="_blank" class="icons github"><img src="./images/company/github.png" alt="" class="icon"></i></a>
+        <a href="https://www.linkedin.com/in/colinchristondcruz/" target="_blank" class="icons linkedin"><img src="./images/company/linkedin.png" alt="" class="icon"></a>
+        <a href="https://www.instagram.com/your-profile" target="_blank" class="icons instagram"><img src="./images/company/instagram.png" alt="" class="icon"></a>
+        <a href="https://leetcode.com/u/moonknight2020/" target="_blank" class="icons linkedin"><img src="./images/skills/code.png" alt="" class="icon"></a>
+        <a href="./Colin_Christon_Dcruz_resume.pdf" download class="cv-button">Download CV</a>
+      </div>
+    </div>
+    <div class="image">
+      <img class="image-content" src="./images/aiImage.png" alt="Colin Christon Dcruz">
+    </div>
+  </section>
+  
+
+  <section id="about" class="about-section">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-content">
+        <div class="bio">
+          <h3>Get to Know Me</h3>
+          <p>I am an SDE Trainee at EG India, specializing in RPGLE programming for backend development.
+             I'm passionate about creating efficient systems and modernizing legacy applications. Continuously learning and improving my skills, I enjoy solving complex challenges and working on both frontend 
+            and backend technologies to deliver high-quality solutions.</p>
+        </div>
+  
+        <div class="education-timeline">
+          <h3>Education</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <h4>Bachelor of Computer Science</h4>
+              <span class="timeline-date">2020 - 2024</span>
+              <p>St Joseph Engineering College - Focused on Software Development, Web Technologies, and Problem-Solving.</p>
+            </div>
+            <div class="timeline-item">
+              <h4>PUC</h4>
+              <span class="timeline-date">2018 - 2020</span>
+              <p>SVS PU College - Specialized in PCMB.</p>
+            </div>
+          </div>
+        </div>
+  
+       
+      </div>
+    </div>
+  </section>
+
+  <section class="skills-section">
+    <div class="skills-wrapper">
+      <div class="skills-scroll">
+        <img src="./images/skills/html.png" alt="Kotlin" class="skill-img">
+        <img src="./images/skills/folder.png" alt="SQL" class="skill-img">
+        <img src="./images/skills/sass.png" alt="RPG" class="skill-img">
+        <img src="./images/skills/js-file.png" alt="Java" class="skill-img">
+        <img src="./images/skills/typescript.png" alt="Angular" class="skill-img">
+        <img src="./images/skills/programing.png" alt="Angular" class="skill-img">
+        <img src="./images/skills/postgre.png" alt="Angular" class="skill-img">
+        <img src="./images/skills/social.png" alt="JavaScript" class="skill-img">
+        <img src="./images/company/github.png" alt="Angular" class="skill-img">
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="work-experience-section">
+    <h2 class="section-title">Work Experience</h2>
+    <div class="experience-container">
+      
+      <!-- Current Experience -->
+      <div class="experience-card">
+        <div class="company-info">
+          <img src="./images/company/egdk.webp" alt="XY Company Logo" class="company-logo">
+          <div>
+            <h3 class="company-name">EG India</h3>
+            <p class="position-duration">SDE Trainee (3 months)</p>
+            <p class="experience-description">
+                Currently contributing as a Software Development Engineer Trainee, working on developing modern customer applications using Angular for the frontend and RPG for backend services.
+              </p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Previous Experience -->
+      <div class="experience-card">
+        <div class="company-info">
+          <img src="./images/company/surya.webp" alt="XY Company Logo" class="company-logo">
+          <div>
+            <h3 class="company-name">Surya Digital</h3>
+            <p class="position-duration">SDE Intern (5 months)</p>
+            <p class="experience-description">
+                Worked as an SDE Intern, specializing in server-side development using Kotlin. Developed scalable APIs, ensured backend efficiency, and integrated various services for seamless application experiences.
+              </p>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+  
+   <section id="projects" class="project-section">
+    <h2 class="section-title">My Projects</h2>
+    <div class="project-grid">
+      <div class="project-cards">
+        <img src="./images/customer.png" alt="Note Management Application" class="project-img">
+            <h3 class="project-title">Customer Maintenance </h3>
+            <p class="project-description">A customer maintenance system developed using RPGLE on IBM i. The application includes features for adding, modifying, and managing customer records. It was built with SQLRPG to handle backend operations efficiently.</p>
+            <div class="project-icons">
+              <img src="./images/project/programming.png" alt="" class="icon">
+              <img src="./images/project/visual-studio.png" alt="" class="icon">
+              <img src="./images/project/sql-server.png" alt="" class="icon">
+              <img src="./images/project/database-file.png" alt="" class="icon">
+            </div>
+            <!-- <a href="#" class="project-link" target="_blank">View Project</a> -->
+      </div>
+      <div class="project-cards">
+        <img src="./images/kanban.png" alt="Note Management Application" class="project-img">
+          <h3 class="project-title">Note Management Application</h3>
+          <p class="project-description">Developed in Kotlin with RPC, this note management system allows users to sign in, sign up, add, modify, and delete notes. It supports authentication via SLT and LLT tokens and available for both mobile and website.</p>
+          <div class="project-icons">
+            <img src="./images/project/kotlin2.png" alt="" class="icon">
+              <img src="./images/project/visual-studio.png" alt="" class="icon">
+              <img src="./images/project/postgre.png" alt="" class="icon">
+              <img src="./images/project/social.png" alt="" class="icon">
+              <img src="./images/project/docker.png" alt="" class="icon">
+          </div>
+          <!-- <a href="#" class="project-link" target="_blank">View Project</a> -->
+      </div>
+      <div class="project-cards">
+        <img src="./images/sign-language.png" alt="Hand Gesture Presentation Control" class="project-img">
+          <h3 class="project-title">Hand Gesture Presentation Control</h3>
+          <p class="project-description">A machine learning-based project that allows users to control presentations using hand gestures. The main feature includes training a model with live hand tracking to recognize gestures and execute presentation commands.</p>
+          <div class="project-icons">
+              <img src="./images/project/python.png" alt="" class="icon">
+              <img src="./images/project/visual-studio.png" alt="" class="icon">
+              <img src="./images/project/social.png" alt="" class="icon">
+              <img src="./images/project/intelije.png" alt="" class="icon">
+             
+          </div>
+          <!-- <a href="#" class="project-link" target="_blank">View Project</a> -->
+      </div>
+
+      <!-- <div class="project-cards hidden">Project D</div>
+      <div class="project-cards hidden">Project E</div>
+      <div class="project-cards hidden">Project D</div>
+      <div class="project-cards hidden">Project E</div> -->
+    </div>
+    <button class="view-more-btn">View More</button>
+    <button class="exit-btn hidden">✖ Close</button>
+  </section>
+
+  <section id="certificates" class="certificates-section">
+    <h2 class="section-title">My Certificates</h2>
+    <div class="certificates-grid">
+      <div class="certificate-card">
+        <img src="./images/certificates/csharp.png" alt="Certificate 1" class="certificate-image">
+        <div class="certificate-info">
+          <h3 class="certificate-title">Foundational C# with Microsoft</h3>
+        </div>
+      </div>
+  
+      <div class="certificate-card">
+        <img src="./images/certificates/postgress.png" alt="Certificate 2" class="certificate-image">
+        <div class="certificate-info">
+          <h3 class="certificate-title">PostgreSQL Essential Training</h3>
+        </div>
+      </div>
+      <div class="certificate-card">
+        <img src="./images/certificates/postman.png" alt="Certificate 2" class="certificate-image">
+        <div class="certificate-info">
+          <h3 class="certificate-title">Engineer Learning Path with Postman</h3>
+        </div>
+      </div>
+      <div class="certificate-card">
+        <img src="./images/certificates/communicating.png" alt="Certificate 2" class="certificate-image">
+        <div class="certificate-info">
+          <h3 class="certificate-title">Communicating with Confidence </h3>
+        </div>
+      </div>
+  
+      <!-- Add more certificate cards here -->
+      
+    </div>
+  </section>
+  
+  
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2 class="section-title">Contact Me</h2>
+      <p class="contact-text">I'd love to hear from you! Feel free to drop me a message below or connect on social media.</p>
+      
+      <div class="contact-content">
+        <!-- Contact Form -->
+        <form class="contact-form" id="con-form">
+          <input type="text" name="from_name" placeholder="Your Name" required class="form-input">
+          <input type="email" name="from_email" placeholder="Your Email" required class="form-input">
+          <textarea name="message" placeholder="Your Message" required class="form-textarea"></textarea>
+          <p class="contact-success" id="success">Message has been sent!</p>
+          <button type="submit"  class="form-btn" id="form-button" >Send Message</button>
+        </form>
+        
+        <!-- Social Media Links -->
+      </div>
+    </div>
+  </section>
+  
+  <footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        <ul>
+          <li><a href="https://www.instagram.com/" target="_blank"><img src="./images/company/instagram.png" alt="" class="icon"></a></li>
+          <li><a href="https://github.com/Colin-Christon" target="_blank"><img src="./images/company/github.png" alt="" class="icon"></a></li>
+          <li><a href="https://www.linkedin.com/in/colinchristondcruz/" target="_blank"><img src="./images/company/linkedin.png" alt="" class="icon"></a></li>
+        </ul>
+      </div>
+      <div class="footer-right">
+        <p id="footer-text">Theme: Light Mode | Version: 1.0</p>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="script.js"></script>
+  <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('lukFEYq4cqP4L9PZx')
+</script>
+</body>
+</html>
