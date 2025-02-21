@@ -335,7 +335,7 @@ $dark-toggle-color:#101517;
 }
 
 //media for both navbar and hero content
-@media(max-width:431px){
+@media(max-width:531px){
   .navbar{
     border: 1px solid white;
 
@@ -827,7 +827,7 @@ $dark-toggle-color:#101517;
     }
   }
 
-  @media (max-width:431px){
+  @media (max-width:531px){
     .certificates-section{
       .certificates-grid{
         grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); ;
