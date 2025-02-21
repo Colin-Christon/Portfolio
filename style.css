@@ -282,6 +282,7 @@ header {
   }
   .hero {
     height: 100vh;
+    width: 60vh;
   }
   .hero .hero-content .name {
     font-size: 1.8rem;
