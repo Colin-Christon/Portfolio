@@ -285,16 +285,17 @@ header {
     width: 60vh;
   }
   .hero .hero-content .name {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
   }
   .hero .hero-content .name span {
-    font-size: 2.2rem;
+    font-size: 1.9rem;
   }
   .hero .hero-content .tagline {
     font-size: 14px;
   }
   .hero .hero-content .action-buttons .cv-button {
-    width: fit-content;
+    font-size: 10px;
+    padding: 13px 4px;
   }
 }
 @media (max-width: 770px) {
